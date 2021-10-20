@@ -47,6 +47,8 @@ namespace Artsy
       services.AddTransient<ArtistsService>();
       services.AddTransient<ArtistsRepository>();
 
+      services.AddTransient<WorksService>();
+      services.AddTransient<WorksRepository>();
 
     }
 

@@ -26,7 +26,12 @@ namespace Artsy.Services
     }
     public Artist Get(int artistId)
     {
-      return _ar.Get(artistId);
+      var artist = _ar.Get(artistId);
+      if (artist == null)
+      {
+        throw new System.Exception("Invalid Artist Id");
+      }
+      return artist;
     }
     public Artist Edit(int artistId, Artist artistData)
     {
